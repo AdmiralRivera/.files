@@ -99,8 +99,8 @@
                     "[Desktop Entry]
                      Name=chadmanwm
                      Comment=Dynamic Window Manager
-                     Exec=/home/Talos/.config/chadmanwm/scripts/run.sh
-                     TryExec=/home/Talos/.config/chadmanwm/scripts/run.sh
+                     Exec=/home/Talos/.config/dwm/scripts/run.sh
+                     TryExec=/home/Talos/.config/dwm/scripts/run.sh
                      Type=Application"
                     output)))
               #t))))))
