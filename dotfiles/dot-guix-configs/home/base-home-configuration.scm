@@ -77,17 +77,11 @@
   ;; Below is the list of Home services.  To search for available
   ;; services, run 'guix home search KEYWORD' in a terminal.
   (services
-   (append (list (service home-bash-service-type
-                          (home-bash-configuration
-                           (aliases '(("grep" . "grep --color=auto")
-                                      ("ll" . "ls -l")
-                                      ("ls" . "ls -p --color=auto")))
-                           (bashrc (list (local-file
-                                          "/home/Talos/src/guix-config/.bashrc"
-                                          "bashrc")))
-                           (bash-profile (list (local-file
-                                                "/home/Talos/src/guix-config/.bash_profile"
-                                                "bash_profile")))))
+   (append (list (service home-zsh-service-type
+                          (home-zsh-configuration
+			   (zshrc (list (local-file
+					 "/home/Talos/.zshrc"
+					 "zshrc")))))
 		 (service home-redshift-service-type
 			  (home-redshift-configuration
 			    (daytime-temperature 6500)

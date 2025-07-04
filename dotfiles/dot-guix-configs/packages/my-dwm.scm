@@ -37,27 +37,15 @@
 (define-module (gnu package my-suckless)
   #:use-module (gnu packages)
   #:use-module (gnu packages base)
-  #:use-module (gnu packages crates-io)
-  #:use-module (gnu packages crypto)
   #:use-module (gnu packages compression)
-  #:use-module (gnu packages cups)
   #:use-module (gnu packages fonts)
   #:use-module (gnu packages fontutils)
   #:use-module (gnu packages gawk)
-  #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
-  #:use-module (gnu packages image)
-  #:use-module (gnu packages imagemagick)
-  #:use-module (gnu packages libbsd)
   #:use-module (gnu packages linux)
-  #:use-module (gnu packages mpd)
   #:use-module (gnu packages ncurses)
-  #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages shells)
-  #:use-module (gnu packages webkit)
   #:use-module (gnu packages xorg)
-  #:use-module (guix build-system cargo)
-  #:use-module (guix build-system glib-or-gtk)
   #:use-module (guix build-system gnu)
   #:use-module (guix download)
   #:use-module (guix gexp)
@@ -67,11 +55,11 @@
   #:use-module (guix packages))
 
 (define-public my-dwm
- (let ((commit "690e6c4ef40cec645d9d3f23ba319b7b0a9d79d8")
+ (let ((commit "eb0712f197dc9afdda5462b4fe874bdc932d5e")
 	(revision "0"))
   (package
     (name "my-dwm")
-    (version (git-version "1.0.1" revision commit))
+    (version (git-version "1.0.2" revision commit))
     (source (origin
 	      (method git-fetch)
 	      (uri (git-reference
@@ -79,7 +67,7 @@
 		     (commit commit)))
 	      (file-name (git-file-name name version))
 	      (sha256	
-		(base32 "06mzkaz43s7v6vk6px0c33wa8rc5gsirkaxjcrikwyy0fhs91y54"))))
+		(base32 "0b0q620gm9rmvv7nimm1rg7xpg1drmj5k6a7hc8ki41dlcgjxbxn"))))
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f
