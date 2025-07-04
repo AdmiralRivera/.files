@@ -43,6 +43,7 @@
   #:use-module (gnu packages gawk)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages linux)
+  #:use-module (gnu packages image)
   #:use-module (gnu packages ncurses)
   #:use-module (gnu packages shells)
   #:use-module (gnu packages xorg)
@@ -55,7 +56,7 @@
   #:use-module (guix packages))
 
 (define-public my-dwm
- (let ((commit "eb0712f197dc9afdda5462b4fe874bdc932d5e")
+ (let ((commit "eb07012fa97dc9afdda54628b4fe874bdc932d5e")
 	(revision "0"))
   (package
     (name "my-dwm")
@@ -104,7 +105,7 @@
                     output)))
               #t))))))
     (inputs
-     (list freetype libx11 libxft libxinerama imlib2))
+     (list imlib2 freetype libx11 libxft libxinerama))
     (home-page "https://dwm.suckless.org/")
     (synopsis "Dynamic window manager")
     (description
