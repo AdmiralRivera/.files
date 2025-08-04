@@ -56,7 +56,7 @@
   #:use-module (guix packages))
 
 (define-public my-dwm
- (let ((commit "eb07012fa97dc9afdda54628b4fe874bdc932d5e")
+ (let ((commit "0a54ce4c29e29ccd12fdb76a1921400f05dde98b")
 	(revision "0"))
   (package
     (name "my-dwm")
@@ -68,7 +68,7 @@
 		     (commit commit)))
 	      (file-name (git-file-name name version))
 	      (sha256	
-		(base32 "0b0q620gm9rmvv7nimm1rg7xpg1drmj5k6a7hc8ki41dlcgjxbxn"))))
+		(base32 "0gxk4a7b2skrvwmvbchsagwnh1pi6012hpn4c208fddjq6qimivr"))))
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f
